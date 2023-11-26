@@ -15,8 +15,28 @@ const item = state.products.find((item)=>item.id===action.payload.id);
     state.products.push(action.payload);
  }
 
-        }
+        },
+        incrementsitem:(state,action)=>{
+            const item = state.products.find((item)=>item.id===action.payload);
+            if(item){
+                item.quantity++;
+            }
+
+        },
+        decrementitem:(state,action)=>{
+            const item = state.products.find((item)=>item.id ===action.payload);
+            if(item && item.quantity>1){
+                item.quantity--;
+            }
+        },
+        resetCart:(state)=>{
+            state.products=[];
+        },
+        deleteItem: (state, action) => {
+            state.products = state.products.filter((item) => item.id !== action.payload);
+          },
+      
     }
 })
-export const {addToCartItems} =walmartSlice.actions;
+export const {addToCartItems,incrementsitem,decrementitem,resetCart,deleteItem} =walmartSlice.actions;
 export default walmartSlice.reducer

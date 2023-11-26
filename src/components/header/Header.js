@@ -1,31 +1,4 @@
-// import React from 'react'
-// import SearchIcon from '@mui/icons-material/Search';
-// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-// import GridViewIcon from '@mui/icons-material/GridView';
-// import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-// import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
-// const Header = () => {
-//      return (
-//     <div className='flex'>
-//       <h1 className='w-full font-extrabold  mx-auto p-8 font-medium'>Walmart</h1>
-//       <img src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'/>
-//      <GridViewIcon/>
-//      <h3>Department</h3>
-//       <MiscellaneousServicesIcon/>
 
-//       <h3>Services</h3>
-//       <input type='text' placeholder='Search Walmart'/>
-// <SearchIcon/>
-//  <FavoriteBorderIcon/>
-//       <button>Recorder
-//         <span>MY Items</span>
-//       </button>
-//       <button>Sign in <h4>Account</h4></button>
-//          <AddShoppingCartIcon/>
-//     </div>
-//   )
-// }
-// export default Header
 
 // import React from 'react';
 // import HomeIcon from '@mui/icons-material/Home';
@@ -111,6 +84,7 @@
 
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -160,17 +134,19 @@ const Header = () => {
           <Button className='text-white hover:bg-gray-600 hover:text-white transition duration-300 group'>
             Sign in <h4 className='text-sm'>Account</h4>
           </Button>
+          <Link to='/cart'>
           <div className='relative group'>
+           
             <AddShoppingCartIcon className='text-2xl' />
             <p className="text-xs font-semibold mt-3 text-whiteText">
             Cart <span className='absolute text-xs -top-1 left-6 font-semibold p-1 h-4 bg-[#f3a847] text-amazon_blue rounded-full flex justify-center items-center'>
-             
              {products.length >0 ? products.length:0}
              
             </span>
           
           </p>
           </div>
+          </Link>
         </div>
         <hr></hr>
 
