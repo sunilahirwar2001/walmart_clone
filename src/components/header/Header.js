@@ -104,11 +104,13 @@ const Header = () => {
       {/* Upper Navbar */}
       <div className='flex items-center justify-between p-4 bg-blue-800 text-white'>
         <div className='flex items-center space-x-4'>
+          <Link to='/'>
+    
           <img
             src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'
             alt='Walmart Logo'
             className='w-12 h-12'
-          />
+          />   </Link>
           <div className='flex items-center space-x-2 group'>
             <GridViewIcon className='text-2xl' />
             <Button variant="contained" className='text-sm group-hover:bg-gray-600 group-hover:text-white transition duration-300'>Departments</Button>
@@ -127,13 +129,10 @@ const Header = () => {
           />
           <SearchIcon className='text-2xl' />
           <FavoriteBorderIcon className='text-2xl' />
-          <Button className='text-white hover:bg-gray-600 hover:text-white transition duration-300 group'>
-            Recorder
-            <span className='ml-1'>MY Items</span>
-          </Button>
-          <Button className='text-white hover:bg-gray-600 hover:text-white transition duration-300 group'>
-            Sign in <h4 className='text-sm'>Account</h4>
-          </Button>
+          <Button variant="contained" className='text-sm group-hover:bg-gray-600 group-hover:text-white transition duration-300'>Recorders my items</Button>
+
+          <Button variant="contained" className='text-sm group-hover:bg-gray-600 group-hover:text-white transition duration-300'>Sign in Accounts</Button>
+
           <Link to='/cart'>
           <div className='relative group'>
            

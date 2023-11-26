@@ -68,13 +68,14 @@ const App = () => {
     <div className="font-bodyFont bg-gray-100">
       <Header />
       <Routes>
-        <Route path="" element={<MainContent />} />
+        <Route path="/" element={<MainContent />} />
         <Route path="/mainsection" element={<MainContent />} />
         <Route path="/cart" element={<Cart />} />
         <Route  path="/footer" element={<Footer/>}/>
         <Route  path="/payment"  element={<Payment/>}/>
         <Route path="/"  element ={<Successfully/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 };
