@@ -110,7 +110,6 @@
 
 
 
-
 import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
@@ -166,7 +165,7 @@ const Header = () => {
         <hr></hr>
 
         {/* New Line Start */}
-        <div className='flex items-center space-x-4'>
+        {/* <div className='flex items-center space-x-4'>
           <img src='https://i5.walmartimages.com/dfw/4ff9c6c9-ad46/k2-_0a671c38-d307-447c-835e-7904ab143c26.v1.png' alt='Phone Image' />
 
           <div className='flex items-center space-x-2'>
@@ -187,7 +186,7 @@ const Header = () => {
             <button>Gift Finder</button>
             <button>Electronics</button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
