@@ -120,8 +120,11 @@ import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices
 import { Button } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { useDispatch } from 'react-redux';
 const Header = () => {
+  const products = useSelector((state) => state.walmart.products);
+  const dispatch = useDispatch();
   return (
     <div>
       {/* Upper Navbar */}
@@ -159,7 +162,14 @@ const Header = () => {
           </Button>
           <div className='relative group'>
             <AddShoppingCartIcon className='text-2xl' />
-            <div className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 text-xs group-hover:block hidden'>2</div>
+            <p className="text-xs font-semibold mt-3 text-whiteText">
+            Cart <span className='absolute text-xs -top-1 left-6 font-semibold p-1 h-4 bg-[#f3a847] text-amazon_blue rounded-full flex justify-center items-center'>
+             
+             {products.length >0 ? products.length:0}
+             
+            </span>
+          
+          </p>
           </div>
         </div>
         <hr></hr>
