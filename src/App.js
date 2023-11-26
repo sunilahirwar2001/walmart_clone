@@ -60,7 +60,9 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Header from "./components/header/Header";
 import MainContent from "./components/mainsection/MainContent";
 import Cart from "./components/cart/Cart";
-
+import Footer from './components/footer/Footer'
+import Payment from "./components/payment/Payment";
+import Successfully from "./components/payment/Successfully";
 const App = () => {
   return (
     <div className="font-bodyFont bg-gray-100">
@@ -69,9 +71,11 @@ const App = () => {
         <Route path="" element={<MainContent />} />
         <Route path="/mainsection" element={<MainContent />} />
         <Route path="/cart" element={<Cart />} />
+        <Route  path="/footer" element={<Footer/>}/>
+        <Route  path="/payment"  element={<Payment/>}/>
+        <Route path="/"  element ={<Successfully/>}/>
       </Routes>
     </div>
   );
 };
-
 export default App;

@@ -56,7 +56,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCartItems } from '../../redux/walmartSlice';
-import { useLoaderData } from 'react-router-dom';
 const MainContent = () => {
   const products = useSelector((state) => state.walmart.products);
   const dispatch = useDispatch();
@@ -85,8 +84,7 @@ const MainContent = () => {
               <button
                 // onClick={() => handlitemeAddToCart()}
                 onClick= {() =>  dispatch(
-
-                    addToCartItems({
+                   addToCartItems({
                       id: item.id,
                       title: item.title,
                       description: item.description,

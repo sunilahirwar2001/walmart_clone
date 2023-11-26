@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState= {
     products:[],
+    selectedProduct: null,
 }
 export const walmartSlice = createSlice({
     name:"walmart",
@@ -35,8 +36,11 @@ const item = state.products.find((item)=>item.id===action.payload.id);
         deleteItem: (state, action) => {
             state.products = state.products.filter((item) => item.id !== action.payload);
           },
+          setSelectedProduct: (state, action) => {
+            state.selectedProduct = action.payload;
+          },
       
     }
 })
-export const {addToCartItems,incrementsitem,decrementitem,resetCart,deleteItem} =walmartSlice.actions;
+export const {addToCartItems,incrementsitem,decrementitem,resetCart,deleteItem,setSelectedProduct} =walmartSlice.actions;
 export default walmartSlice.reducer
